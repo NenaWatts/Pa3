@@ -2,6 +2,7 @@
 #define EMPLOYEE_H
 
 #include<string>
+#include <functional>
 using namespace std;
 
 class Employee 
@@ -30,7 +31,7 @@ private:
     double salary; 
 };
 
-
+namespace std{ 
 template<>
 class hash<Employee> 
 {
@@ -41,5 +42,6 @@ public:
         return hf( item.getName( ) );
     }
 };
+}
 
 #endif
